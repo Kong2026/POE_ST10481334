@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://GorillaGroup.co.za/sitemap.xml
+Host: https://GorillaGroup.co.za
