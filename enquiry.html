@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enquiry — Gorilla Business Group</title>
+  <meta name="description" content="Enquiry form for services, volunteering and sponsorship for Gorilla Business Group." />
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <div class="brand"><div class="logo">GB</div><div class="brand-text"><strong>Gorilla Business Group</strong><small>Gorilla Bricks & Construction</small></div></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="enquiry.html" class="active cta">Enquiry</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h1>Enquiry & Request a Quote</h1>
+    <p class="small">Use this form to enquire about services, products, volunteering or sponsorship. We'll attempt to provide an indicative cost/availability after you submit.</p>
+
+    <form id="enquiryForm" class="form" novalidate>
+      <label>Full name*</label>
+      <input name="name" required minlength="2" type="text" placeholder="Your name">
+
+      <label>Email*</label>
+      <input name="email" required type="email" placeholder="you@domain.co.za">
+
+      <label>Phone*</label>
+      <input name="phone" required type="tel" placeholder="+27 76 123 4567" pattern="^\+?27\s?\d{2}\s?\d{3}\s?\d{4}$">
+
+      <label>Purpose*</label>
+      <select name="purpose" required>
+        <option value="">Select purpose</option>
+        <option value="quote">Request a quote (product / service)</option>
+        <option value="volunteer">Volunteer / Community</option>
+        <option value="sponsor">Sponsorship</option>
+      </select>
+
+      <label>Service of interest*</label>
+      <select name="service" required>
+        <option value="">Select service</option>
+        <option>Stock bricks</option>
+        <option>Block bricks</option>
+        <option>Pavers</option>
+        <option>Kerbs & channels</option>
+        <option>Precast columns</option>
+        <option>Delivery & logistics</option>
+        <option>Turnkey installation</option>
+        <option>Technical support / testing</option>
+      </select>
+
+      <label>Project location (town / suburb)</label>
+      <input name="location" type="text" placeholder="E.g., Kings Park, KwaMhlanga">
+
+      <label>Estimated quantity (e.g., m² or units)</label>
+      <input name="quantity" type="text" placeholder="e.g., 200 m² or 500 units">
+
+      <label>Timeline</label>
+      <input name="timeline" type="date">
+
+      <label>Details*</label>
+      <textarea name="message" required minlength="10" maxlength="1200" placeholder="Project details, timeline, attachments (optional)"></textarea>
+
+      <label>Attach plan (optional) — PDF/JPG/PNG</label>
+      <input name="plan" type="file" accept=".pdf,.jpg,.jpeg,.png">
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Submit enquiry</button>
+        <button type="reset" class="btn ghost">Reset</button>
+      </div>
+
+      <div id="enquiryResult" role="status" aria-live="polite" class="small"></div>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Gorilla Business Group</h4>
+      <p class="small">Kings Park, KwaMhlanga</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p class="small"><a href="mailto:info@gorillabricks.co.za">info@gorillabricks.co.za</a></p>
+    </div>
+  </div>
+  <div class="small" style="text-align:center">© Gorilla Business Group — <span id="year4"></span></div>
+</footer>

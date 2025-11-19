@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Gorilla Business Group</title>
+  <meta name="description" content="Contact Gorilla Business Group — send us a message or request general information." />
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <div class="brand"><div class="logo">GB</div><div class="brand-text"><strong>Gorilla Business Group</strong><small>Gorilla Bricks & Construction</small></div></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="enquiry.html" class="cta">Enquiry</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h1>Contact us</h1>
+    <p class="small">General enquiries — messages are compiled into an email or sent via AJAX to our inbox (if backend configured).</p>
+
+    <form id="contactForm" class="form" novalidate>
+      <label>Full name*</label>
+      <input name="name" required minlength="2" type="text">
+
+      <label>Email*</label>
+      <input name="email" required type="email">
+
+      <label>Phone</label>
+      <input name="phone" type="tel" placeholder="+27 76 123 4567">
+
+      <label>Message type*</label>
+      <select name="type" required>
+        <option value="">Select</option>
+        <option>General enquiry</option>
+        <option>Sales</option>
+        <option>Careers</option>
+        <option>Press</option>
+      </select>
+
+      <label>Message*</label>
+      <textarea name="message" required minlength="10"></textarea>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Send message</button>
+        <button type="reset" class="btn ghost">Reset</button>
+      </div>
+
+      <div id="contactResult" role="status" aria-live="polite" class="small"></div>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Gorilla Business Group</h4>
+      <p class="small">Kings Park, KwaMhlanga</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p class="small"><a href="mailto:info@gorillabricks.co.za">info@gorillabricks.co.za</a></p>
+    </div>
+  </div>
+  <div class="small" style="text-align:center">© Gorilla Business Group — <span id="year5"></span></div>
+</footer>

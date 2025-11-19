@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Gorilla Business Group</title>
+  <meta name="description" content="Services by Gorilla Business Group: stock bricks, block bricks, pavers, kerbs, precast and turnkey installation in South Africa." />
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <div class="brand"><div class="logo">GB</div><div class="brand-text"><strong>Gorilla Business Group</strong><small>Gorilla Bricks & Construction</small></div></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="enquiry.html" class="cta">Enquiry</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h1>Our Services</h1>
+    <p class="small">Click a service to see details and place an enquiry.</p>
+
+    <div class="controls">
+      <input id="servicesSearch" placeholder="Filter services..." aria-label="Filter services">
+      <select id="servicesCategory" aria-label="Category filter">
+        <option value="">All categories</option>
+        <option value="manufacturing">Manufacturing</option>
+        <option value="delivery">Delivery</option>
+        <option value="installation">Installation</option>
+        <option value="technical">Technical</option>
+      </select>
+      <select id="servicesSort" aria-label="Sort services">
+        <option value="relevance">Relevance</option>
+        <option value="alpha">A → Z</option>
+      </select>
+    </div>
+
+    <div id="servicesList" class="services-grid" aria-live="polite"><!-- JS injects full list --></div>
+  </section>
+
+  <!-- Modal for service details -->
+  <div id="serviceModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <ul id="modalSpecs"></ul>
+      <div style="margin-top:.6rem">
+        <a id="modalEnquiry" class="btn">Enquire about this service</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Gorilla Business Group</h4>
+      <p class="small">Kings Park, KwaMhlanga</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p class="small"><a href="mailto:info@gorillabricks.co.za">info@gorillabricks.co.za</a></p>
+    </div>
+  </div>
+  <div class="small" style="text-align:center">© Gorilla Business Group — <span id="year3"></span></div>
+</footer>

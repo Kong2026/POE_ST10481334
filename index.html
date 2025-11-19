@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gorilla Business Group — Home</title>
+  <meta name="description" content="Gorilla Business Group — Gorilla Bricks & Construction. Stock bricks, block bricks, pavers, kerbs and construction services in Gauteng & Mpumalanga, South Africa." />
+  <meta name="keywords" content="bricks, pavers, kerbs, Gorilla Bricks, KwaMhlanga, concrete, South Africa, construction" />
+  <link rel="stylesheet" href="styles.css">
+  <!-- Leaflet CSS used on index for map preview -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="" crossorigin=""/>
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <div class="brand"><div class="logo">GB</div><div class="brand-text"><strong>Gorilla Business Group</strong><small>Gorilla Bricks & Construction</small></div></div>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="enquiry.html" class="cta">Enquiry</a>
+        <a href="contact.html">Contact</a>
+        <button id="menuToggle" class="menu-toggle" aria-label="toggle menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div class="hero-content">
+        <h1>Quality concrete bricks, paving & construction — built for South African conditions</h1>
+        <p class="lead">Manufacturing & installation across Gauteng & Mpumalanga. SANS-compliant, B-BBEE aware, locally employed.</p>
+        <div class="hero-actions">
+          <a href="enquiry.html" class="btn">Request a Quote</a>
+          <a href="services.html" class="btn ghost">View Services</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img alt="Brick factory production line" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=60" loading="lazy">
+        <figcaption class="small">Factory floor — image: Unsplash</figcaption>
+      </figure>
+    </section>
+
+    <section class="card" aria-labelledby="servicesPreviewTitle">
+      <div class="section-header">
+        <h2 id="servicesPreviewTitle">Services preview</h2>
+        <div class="small">Search & filter the services list or view the full services page.</div>
+      </div>
+
+      <div class="search-row">
+        <input id="serviceSearch" placeholder="Search services (e.g., pavers, kerbs)" aria-label="Search services">
+        <select id="serviceSort" aria-label="Sort services">
+          <option value="relevance">Sort: Relevance</option>
+          <option value="alpha">Sort: A → Z</option>
+        </select>
+        <button id="openServices" class="btn ghost">Open services page</button>
+      </div>
+
+      <div id="servicesPreview" class="services-grid" aria-live="polite">
+        <!-- JS injects small set of cards here -->
+      </div>
+    </section>
+
+    <section class="card" id="gallery" aria-labelledby="galleryTitle">
+      <h2 id="galleryTitle">Gallery</h2>
+      <p class="small">Click an image to open the lightbox.</p>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- JS loads gallery thumbnails -->
+      </div>
+    </section>
+
+    <section class="card" id="mapSection" aria-labelledby="mapTitle">
+      <h2 id="mapTitle">Our Location</h2>
+      <div id="map" style="height:320px;border-radius:8px;overflow:hidden"></div>
+      <p class="small">Kings Park, KwaMhlanga — serving Gauteng & Mpumalanga.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Gorilla Business Group</h4>
+        <p class="small">Kings Park, KwaMhlanga • Serving Gauteng & Mpumalanga</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="small"><a href="tel:+27761234567">+27 76 123 4567</a><br><a href="mailto:info@gorillabricks.co.za">info@gorillabricks.co.za</a></p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <p class="small"><a href="services.html">Services</a> • <a href="enquiry.html">Enquiry</a> • <a href="contact.html">Contact</a></p>
+      </div>
+    </div>
+    <div class="small" style="text-align:center">© Gorilla Business Group — <span id="year"></span></div>
+  </footer>
+
+  <!-- External libs: Leaflet and a tiny lightbox polyfill (we use native + small JS) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="" crossorigin=""></script>
+</body>
+</html>
